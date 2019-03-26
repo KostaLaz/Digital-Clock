@@ -14,10 +14,13 @@ public class DigitalClock extends JFrame {
 	public DigitalClock() {
 
 		jlabClock = new JLabel("");
+		jlabClock.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		jlabClock.setBackground(Color.DARK_GRAY);
+		jlabClock.setForeground(Color.RED);
 		getContentPane().setLayout(new FlowLayout());
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		getContentPane().add(jlabClock);
-		setSize(1200, 120);
+		setSize(600, 120);
 		setLocationRelativeTo(null);
 		ct = new ClockThread(this);
 		setVisible(true);
