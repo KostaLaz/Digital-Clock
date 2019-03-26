@@ -11,6 +11,9 @@ public class DigitalClock extends JFrame {
 	}
 	
 	JLabel jlabClock;
+	ClockThread ct;
+	
+	
 	
 	public void digitalClock () {
 		jlabClock = new JLabel("");
@@ -19,6 +22,7 @@ public class DigitalClock extends JFrame {
 		getContentPane().add(jlabClock);
 		setSize(1200, 120);
 		setLocationRelativeTo(null);
+		ct = new ClockThread(this);
 		setVisible(true);
 		
 		
